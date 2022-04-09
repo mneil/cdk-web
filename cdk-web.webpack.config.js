@@ -66,6 +66,10 @@ module.exports = {
       ["proxy-agent"]: require.resolve("./webpack/modules/empty"),
       ["path"]: require.resolve("./webpack/modules/path"),
       ["process"]: require.resolve("./webpack/modules/process"),
+      // Alias a "stable" python lambda to our patched module
+      ["aws-cdk-lib/aws-lambda-python"]: require.resolve(
+        "./webpack/modules/aws-cdk-lib/aws-lambda-python/lib/index.js"
+      ),
       ...Object.assign(
         ...[
           "node_modules/aws-cdk-lib/core/lib/asset-staging.js",

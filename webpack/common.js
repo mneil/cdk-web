@@ -74,6 +74,7 @@ const getAllModules = _.memoize(() => {
       }
     }
   );
+  allModules.push("aws-cdk-lib/aws-lambda-python"); // allow users to require this alias in browser
   return allModules;
 });
 
