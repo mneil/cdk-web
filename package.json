@@ -118,5 +118,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@aws-cdk/aws-lambda-python-alpha": "^2.20.0-alpha.0"
   }
 }

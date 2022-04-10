@@ -67,9 +67,9 @@ module.exports = {
       ["path"]: require.resolve("./webpack/modules/path"),
       ["process"]: require.resolve("./webpack/modules/process"),
       // Alias a "stable" python lambda to our patched module
-      ["aws-cdk-lib/aws-lambda-python"]: require.resolve(
-        "./webpack/modules/aws-cdk-lib/aws-lambda-python/lib/index.js"
-      ),
+      // ["aws-cdk-lib/aws-lambda-python"]: require.resolve(
+      //   "./webpack/modules/@aws-cdk/aws-lambda-python-alpha/lib/index.js"
+      // ),
       ...Object.assign(
         ...[
           "node_modules/aws-cdk-lib/core/lib/asset-staging.js",
@@ -77,6 +77,9 @@ module.exports = {
           "node_modules/aws-cdk-lib/aws-lambda-nodejs/lib/function.js",
           "node_modules/aws-cdk-lib/aws-lambda-nodejs/lib/bundling.js",
           "node_modules/aws-cdk-lib/aws-lambda-nodejs/lib/index.js",
+          "node_modules/@aws-cdk/aws-lambda-python-alpha/lib/function.js",
+          "node_modules/@aws-cdk/aws-lambda-python-alpha/lib/bundling.js",
+          "node_modules/@aws-cdk/aws-lambda-python-alpha/lib/index.js",
           "node_modules/aws-cdk/lib/util/directories.js",
           "node_modules/console-browserify/index.js",
         ].map((mod) => ({ [rooted(mod)]: rooted(mod.replace("node_modules", "webpack/modules")) }))
